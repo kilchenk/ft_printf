@@ -13,23 +13,15 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-static int	check_letter(const char *str, int i, va_list arg)
+static int	check_letter(char i, va_list arg)
 {
 	int	num;
 
 	num = 0;
-	if (str[i] == 'c')
-		num += ft_putchar_fd(va_arg(arg, int), 1);
-	if (str[i] == 's')
-		num += putstr_fd(va_arg(arg, char *), 1);
-	if (str[i] == 'd' || str [i] == 'i')
-		num += ft_putnbr_fd(va_arg(arg, int), 1);
-	if (str[i] == '%')
-		num += ft_putchar_fd('%', 1);
-	if (str[i] == 'u')
-		num +=
+	if (i =='c')
+		num += print_char();
 
-	return (num);
+	return num;
 }
 
 int	ft_printf(const char *format, ...)
@@ -45,15 +37,15 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			letters += check_letter(format, i + 1, arg);
-			i += 2;
+			i++;
+			letters += check_letter(format[i], ptr);
 		}
 		else
 		{
 			write(1, &format[i], 1);
-			i++;
 			letters++;
 		}
+		i++;
 	}
 	va_end (arg);
 	return (letters);
