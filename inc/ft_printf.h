@@ -6,7 +6,7 @@
 /*   By: kilchenk <kilchenk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:03:53 by kilchenk          #+#    #+#             */
-/*   Updated: 2023/01/14 21:51:09 by kilchenk         ###   ########.fr       */
+/*   Updated: 2023/01/14 22:15:08 by kilchenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@
 int		ft_printf(const char *format, ...);
 int		putstr_fd(char *s, int fd);
 int		putchar_fd(char c, int fd);
-void	ft_digit(long long int n, int *length, char *hexadecimal, int base);
+int		ft_digit(long long int n, int *length, char *hexadecimal, int base);
 
 #endif

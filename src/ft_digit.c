@@ -6,14 +6,14 @@
 /*   By: kilchenk <kilchenk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 20:10:46 by kilchenk          #+#    #+#             */
-/*   Updated: 2023/01/14 21:50:28 by kilchenk         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:20:37 by kilchenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-void	ft_digit(long long int n, int *length, char *hexadecimal, int base)
+int	ft_digit(long long int n, int *length, char *hexadecimal, int base)
 {
 	if (n < 0)
 	{
@@ -23,4 +23,5 @@ void	ft_digit(long long int n, int *length, char *hexadecimal, int base)
 	if (n >= base)
 		ft_digit((n / base), length, hexadecimal, base);
 	*length += write(1, &hexadecimal[n % base], 1);
+	return (*length);
 }
