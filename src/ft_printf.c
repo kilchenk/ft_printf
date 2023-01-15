@@ -6,7 +6,7 @@
 /*   By: kilchenk <kilchenk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:22:04 by kilchenk          #+#    #+#             */
-/*   Updated: 2023/01/14 23:21:24 by kilchenk         ###   ########.fr       */
+/*   Updated: 2023/01/15 15:18:49 by kilchenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,15 @@ static int	check_letter(const char *str, va_list ar)
 	if (*str == 'u')
 		return (ft_digit(va_arg(ar, unsigned int), &num, "0123456789", 10));
 	if (*str == 'x')
-		return (ft_digit(va_arg(ar, unsigned int), &num, "0123456789abcdef", 16));
+		return (ft_digit(va_arg(ar, unsigned int), &num, \
+		"0123456789abcdef", 16));
 	if (*str == 'X')
-		return (ft_digit(va_arg(ar, unsigned int), &num, "0123456789ABCDEF", 16));
+		return (ft_digit(va_arg(ar, unsigned int), &num, \
+		"0123456789ABCDEF", 16));
 	if (*str == 'p')
 	{
 		putstr_fd("0x", 1);
-		return (ft_digit(va_arg(ar, size_t), &num, "0123456789abcdef", 16) + 2);
+		return (ft_pointer(va_arg(ar, size_t), "0123456789abcdef") + 2);
 	}
 	return (0);
 }
@@ -70,9 +72,9 @@ int	ft_printf(const char *format, ...)
 // int main()
 // {
 //     // int x = 5;
-// 	ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
+// 	ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
 // 	// ft_printf("%i\n", i);
-// 	printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
+// 	printf(" %p %p ", LONG_MIN, LONG_MAX);
 // 	// printf("%i\n", x);
 //     // ft_printf("%i\n", x);
 // 	// printf("%d\n", x);

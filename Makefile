@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kilchenk <kilchenk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/10 14:43:12 by kilchenk          #+#    #+#              #
-#    Updated: 2023/01/14 23:13:02 by kilchenk         ###   ########.fr        #
+#    Created: 2023/01/15 15:30:17 by kilchenk          #+#    #+#              #
+#    Updated: 2023/01/15 15:30:20 by kilchenk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 LIB = libft.a
-LIB_D = Libft
+LIB_D = libft
 SRC = src
 INC = inc
 OBJ = obj
