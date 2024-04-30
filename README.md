@@ -49,3 +49,6 @@ Compile the above program using the provided instructions and execute it to see 
 
 ## Contributing
 Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests.
+
+---
+Made by kilchenk: kilchenk@student.42wolfsburg.de | LinkedIn: [kilchenk](https://www.linkedin.com/in/kyrylo-ilchenko/)
